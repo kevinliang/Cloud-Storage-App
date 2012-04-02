@@ -1,0 +1,21 @@
+Options -Indexes
+
+XSendFile On
+XSendFileAllowAbove On
+
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+RewriteEngine On
+
+RewriteRule ^image/(.*)$ download.php
+RewriteRule ^slideshow/(.*)$ download.php
+RewriteRule ^download/(.*)$ download.php
+RewriteRule ^zip/(.*)$ download.php
+RewriteRule ^l/(.*)$ link.php
+
+ErrorDocument 403 /error.php?id=5
+ErrorDocument 404 /error.php?id=6

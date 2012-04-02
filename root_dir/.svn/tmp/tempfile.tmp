@@ -1,0 +1,17 @@
+Options -Indexes
+
+XSendFile On
+XSendFileAllowAbove On
+
+AddType video/ogg .ogm
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+ErrorDocument 403 /error.php?id=5
+ErrorDocument 404 /error.php?id=6
+
+RewriteEngine on
+#RewriteRule (.*) /error.php?id=7
+Redirect 301 / http://clouthe.com/down.php
